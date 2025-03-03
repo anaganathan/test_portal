@@ -1,0 +1,37 @@
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f9fc;
+        color: #333;
+    }
+    header {
+        background-color: #005daa;
+        color: white;
+        text-align: center;
+        padding: 10px;
+    }
+    .navbar {
+        display: flex;
+        justify-content: center;
+        background: #003f7d;
+        padding: 10px;
+    }
+    .navbar a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+    }
+    .navbar a:hover {
+        background: #004f9d;
+        border-radius: 5px;
+    }
+    main {
+        padding: 20px;
+    }
+    footer {
+        background: #005daa;
+        color: white;
+        text-align: center;
+        padding: 10px;
+    }
+    

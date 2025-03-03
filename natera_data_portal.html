@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natera Data Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/4.2.2/introjs.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-color: #f5f7fa;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+        header {
+            background: #004c8c;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+            position: relative;
+        }
+        header img {
+            position: absolute;
+            left: 20px;
+            top: 15px;
+            height: 40px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background: #003366;
+            padding: 15px;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-weight: 500;
+            transition: background 0.3s, color 0.3s;
+        }
+        .navbar a:hover {
+            background: #005daa;
+            color: #ffffff;
+            border-radius: 5px;
+        }
+        .content {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .user-story, .value-prop, .links-section, .video-section {
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        iframe, video, img {
+            border: 0;
+            margin: 20px 0;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        footer {
+            background: #004c8c;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+        .download-link {
+            background: #004c8c;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+        .download-link:hover {
+            background: #003366;
+        }
+        .chatbot-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #004c8c;
+            color: #fff;
+            border: none;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+            transition: background 0.3s;
+        }
+        .chatbot-button:hover {
+            background: #003366;
+        }
+        .chat-popup {
+            display: none;
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 400px;
+            height: 500px;
+            border: 2px solid #ccc;
+            z-index: 9;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+            border-radius: 10px;
+        }
+        .chat-popup iframe {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+        .close-chat {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: #004c8c;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .tutorial-button {
+            background: #ff9800;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .tutorial-button:hover {
+            background: #e68900;
+        }
+        .widget {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .widget h3 {
+            margin-top: 0;
+            color: #004c8c;
+        }
+        .btn-primary {
+            background-color: #004c8c;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #003366;
+        }
+    </style>
+</head>
+<body>
+
+
+    
+
+<header>
+    <img src="Images/logo.png" alt="Natera Logo">
+    <h1>Natera Data Portal</h1>
+</header>
+
+<div class="navbar">
+    <a href="#home" data-intro="This is the Home section where you get an overview of the portal.">Home</a>
+    <a href="#data-products" data-intro="Explore the various data products we offer.">Data Products</a>
+    <a href="#user-stories" data-intro="Hear from our early adopters and their user stories to understand the impact of our platform.">Hear from our users</a>
+    <a href="#value-prop" data-intro="Discover the value proposition of DataX.">Value Proposition</a>
+    <a href="#links" data-intro="Useful Navigation/Confluence links to get you onboarded, signed up, share roadmaps, plan and get feedback">Useful Links</a>
+    <a href="#Get in touch" data-intro="Reach out to Avinash Naganathan if you have any questrions or refer to DataX commercial wiki pages to get started or FAQ.">Get in touch</a>
+</div>
+
+<div class="content" id="home" data-intro="Welcome to the Natera Data Portal, your hub for all data-related insights.">
+    <h2>Welcome to the Natera Data Portal</h2>
+    <img src="Images/image_1.png" alt="Internal Data Portal">
+    <p>Welcome to the Natera Data Portal. This platform is designed to provide easy access to data and information with a smooth and intuitive experience. Scroll down for more details and interactive features.</p>
+    <button class="tutorial-button" onclick="startTutorial()">Start Guided Tutorial</button>
+    <a class="download-link" href="#data-products">Explore Data Products</a>
+</div>
+
+<div class="content video-section" id="video-section" data-intro="Watch this video to understand the DataZone portal journey.">
+    <h2>Interactive Video Guide</h2>
+    <video width="100%" height="auto" controls>
+        <source src="Videos/DataZone_Avinash.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <p>Watch the video above to learn how to navigate the DataZone portal, including login steps, searching for data assets, accessing the data catalog, and visualizing data in QuickSight.</p>
+</div>
+
+<div class="content widget" id="feature-widget">
+    <h3>New Feature: Access New features such as Data lineage, Catalog, Queryability, PII filtering etc. </h3>
+    <img src="Images/aws1.png" alt="Data Asset Favorites">
+    <p>Introducing the ability to mark frequently used data assets as favorites! This feature allows users to quickly access their most important data without navigating through multiple sections.</p>
+    <button class="btn-primary">Learn More</button>
+</div>
+
+<div class="content widget" id="insights-widget">
+    <h3>Build data products to identify product gaps, measure success,manage excepotions etc. </h3>
+    <img src="Images/image_2.png" alt="Data products to suit the need of your product or Natera's business OKR">
+    <p>Access real-time analytics across multiple domains including Commerce, Patient, and Clinical data. Unlock the potential behind every use case armed with data product, triggers and alerts to suit your product analytics or decisioning.</p>
+    <button class="btn-primary">Access Insights</button>
+</div>
+
+<div class="content" id="data-products" data-intro="Data Products Overview, including our offerings for commerce, fulfillment, and billing.">
+    <h2>Data Products Overview</h2>
+    <img src="Images/image_4.png" alt="DataX Platform Context">
+    <p>DataX, our AWS-powered data mesh, enables efficient data management and analytics for Natera's key domains, including commerce, fulfillment, and billing. DataX provides near-real-time insights, allowing teams to make informed decisions faster.</p>
+    <ul>
+        <li>Commerce Data: Track patient service, clinic and physician service, and unified patient portal data.</li>
+        <li>Fulfillment Data: Analyze order processing, kit deliveries, and test management.</li>
+        <li>Billing Data: Access billing and finance insights for seamless operations.</li>
+        <li>Real-Time Analytics: Get immediate insights into ongoing operations to make informed decisions promptly.</li>
+        <li>Data Visualization: Utilize QuickSight to create interactive, insightful dashboards for various stakeholders.</li>
+    </ul>
+    <a class="download-link" href="#value-prop">Learn About the Value Proposition</a>
+</div>
+
+<div class="content" id="user-stories" data-intro="Read stories about how DataX is making a difference.">
+    <h2>User Stories</h2>
+    <div class="user-story">
+        <img src="Images/image_5.png" alt="Hear from our adopters on their User Story">
+        <h3>Product Manager - Using DataX for Commercial product data needs and use cases including pillar project launches such as G64, wes.onX, tfMRD etc.  </h3>
+        <p>A Product Manager at Natera used DataX to analyze commerce data, including patient service records and clinic data. Using AWS Athena for querying and QuickSight for visualization, the manager identified trends in patient engagement, which led to a 10% improvement in service delivery efficiency.</p>
+    </div>
+    <div class="user-story">
+        <h3>Clinical PM - Enhancing Patient Outcomes, portal and offline targetting with Data Mesh</h3>
+        <p>A Clinical PM leveraged the DataX mesh to explore patient data and streamline clinical workflows. By using interactive text to sql QuickSight dashboards, they were able to identify bottlenecks and inefficiencies in the patient journey. The insights led to a 15% reduction in response times and improved overall patient satisfaction.</p>
+    </div>
+    <div class="user-story">
+        <h3>Operations Manager - Optimizing MPX Data with patient opt ins, omnichannel enriched insifghts</h3>
+        <p>An Operations Manager utilized DataX for MPX data analysis, using Athena for in-depth querying and QuickSight for visualization. This enabled the manager to optimize logistics and improve the fulfillment process. By analyzing the real-time data, operational delays were reduced by 20%, improving the overall efficiency of the MPX workflow.</p>
+    </div>
+</div>
+
+<div class="content" id="value-prop" data-intro="Learn about the unique value DataX brings to your organization.">
+    <h2>Value Proposition of DataX for Natera</h2>
+    <div class="value-prop">
+        <h3>Data Discoverability & Collaboration</h3>
+        <p>DataX empowers users to discover, access, and collaborate on data products across domains. With features like metadata tagging, data cataloging, and real-time access controls, users can easily find the data they need for their projects. This discoverability saves significant time, allowing stakeholders to focus on deriving insights and making impactful decisions.</p>
+    </div>
+    <div class="value-prop">
+        <h3>Modernized Data Infrastructure</h3>
+        <p>DataX provides a unified data infrastructure that supports infrastructure-as-code, automated environment provisioning, and self-service analytics with tools like AWS Athena and QuickSight. The modernized infrastructure ensures that data is always accessible, up-to-date, and ready for analysis, giving teams the power to act quickly based on real-time insights.</p>
+    </div>
+    <div class="value-prop">
+        <h3>Seamless User Experience</h3>
+        <p>Access all data assets through the DataZone portal, where you can query, visualize, and manage data efficiently. From provisioning environments to exploring dashboards, DataX ensures a smooth, user-friendly experience for all Natera teams. With one-click environment provisioning and easy access controls, users can get started with data exploration in no time.</p>
+    </div>
+    <div class="value-prop">
+        <h3>Self-Service Capabilities</h3>
+        <p>DataX provides self-service capabilities that enable different roles within the organization to manage their data needs independently. Users can provision environments, create dashboards, and analyze data without waiting for centralized teams, making the process more agile and responsive to business needs.</p>
+    </div>
+</div>
+
+<div class="content links-section" id="links" data-intro="Explore these useful links for further insights.">
+    <h2>Useful Links</h2>
+    <ul>
+        <li><a href="https://jira.natera.com/secure/PortfolioPlanView.jspa?id=171&sid=169&vid=753#plan/backlog" target="_blank">JIRA Project - Data X Overview</a></li>
+        <li><a href="https://jira.natera.com/secure/RapidBoard.jspa?projectKey=DXP&rapidView=1194" target="_blank">Data Mesh Platform Sprint 8</a></li>
+        <li><a href="https://jira.natera.com/secure/RapidBoard.jspa?rapidView=1256&view=detail&quickFilter=6371" target="_blank">Deliverables Overview</a></li>
+        <li><a href="https://docs.google.com/spreadsheets/d/1HwfHEPeLeqp0EgtZtdWub3DYK5UyM7j_prgbkcfYAM8/edit?gid=0#gid=0" target="_blank">Data Product Requirements Spreadsheet</a></li>
+        <li><a href="https://confluence.natera.com/display/CAPPS/Onboarding+-Data+Mesh+Commerce" target="_blank">Onboarding - Data Mesh Commerce</a></li>
+        <li><a href="https://dzd_5g0ah34bvg5yc0.datazone.us-west-2.on.aws/" target="_blank">DataZone Production Link</a></li>
+        <li><a href="https://confluence.natera.com/display/CHATBOT/Analytics+Requirements+for+Natera+Support+Chatbot" target="_blank">Analytics Requirements for Chatbot</a></li>
+    </ul>
+</div>
+
+<div class="content" id="reach out" data-intro="Reach out to Avinash Naganathan if you have any questrions or refer to DataX commercial wiki pages to get started or FAQ.">Get in touch</a>
+">
+    <h2>Get involved</h2>
+    <p>Reach out to Avinash Naganathan if you have any questrions or refer to DataX commercial wiki pages to get started or FAQ.</p>
+    <a class="download-link" href="/mnt/data/complete_natera_data_portal.zip" download="complete_natera_data_portal.zip">Download Complete Website</a>
+</div>
+
+<footer>
+    <p>&copy; 2024 Natera Inc. All rights reserved. | Contact us: <a href="mailto:Anaganathan@natera.com">Anaganathan@natera.com</a></p>
+</footer>
+
+<!-- Chatbot Popup -->
+<button class="chatbot-button" onclick="toggleChat()"><i class="fas fa-comments"></i></button>
+<div class="chat-popup" id="chatPopup">
+    <button class="close-chat" onclick="toggleChat()">Close</button>
+    <iframe src="https://docsbot.ai/iframe/WrfOeEX9xaoRDcsEc6fX/fhbMC9fTrtWETdCJLNYg?placeholder=Ask+about+Data+X" allowtransparency="true"></iframe>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/4.2.2/intro.min.js"></script>
+<script>
+    function toggleChat() {
+        var chatPopup = document.getElementById("chatPopup");
+        if (chatPopup.style.display === "none" || chatPopup.style.display === "") {
+            chatPopup.style.display = "block";
+        } else {
+            chatPopup.style.display = "none";
+        }
+    }
+    
+    function startTutorial() {
+        introJs().start();
+    }
+</script>
+
+
+
+</body>
+</html>

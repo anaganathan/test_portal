@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Mesh Query Tool</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/4.2.2/introjs.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-color: #f5f7fa;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+        header {
+            background: #004c8c;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #003366;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+        .section {
+            margin: 20px 0;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+        }
+        .workflow-diagram {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .workflow-diagram img {
+            max-width: 100%;
+            height: auto;
+        }
+        .error-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 400px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .error-container img {
+            width: 80px;
+            margin-bottom: 20px;
+        }
+        .error-container p {
+            font-size: 1.2em;
+            color: #666;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Data Mesh Query Tool</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="search_data_products.html">Query Data Products</a>
+    </nav>
+    <div class="container">
+        <div class="section">
+            <h2>Welcome to the Data Mesh Query Tool</h2>
+            <p>This tool allows you to ask questions and retrieve insights from various data products within the AWS Data Mesh ecosystem, including services like Sales Order, Patient Service, Activity Service, UPP, LIMS, and Billing Eligibility Service.</p>
+        </div>
+
+        <div class="section">
+            <h3>How to Use</h3>
+            <ol>
+                <li>Enter your question in plain text in the input box.</li>
+                <li>Click on the "Search" button to query your data products.</li>
+                <li>Analyze the results to understand data gaps and opportunities.</li>
+            </ol>
+        </div>
+
+        <div class="workflow-diagram">
+            <h3>Workflow</h3>
+            <img src="images/workflow_diagram.png" alt="Workflow Diagram">
+        </div>
+
+        <div class="section">
+            <h3>Query Insights</h3>
+            <iframe src="https://us-west-2.quicksight.aws.amazon.com/sn/start/topics" allow="fullscreen; clipboard-read; clipboard-write;" sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-modals"></iframe>
+            <div class="error-container">
+                <img src="https://cdn-icons-png.flaticon.com/512/564/564619.png" alt="Access Denied">
+                <p>You are not authorized to view this page. Please ensure you have the necessary permissions in AWS QuickSight.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
